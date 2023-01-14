@@ -1,6 +1,6 @@
 html {
     font-size: 100%;
-    width: 100em;
+    width: 100%;
     margin-bottom: -300em;
   }
   body {
@@ -15,6 +15,12 @@ html {
     margin-top: 40px;
   }
 
+
+
+  #main{
+    display:flex;
+    justify-content: center;
+  }
   /*********************************************************************
   
   
@@ -30,7 +36,7 @@ html {
     -moz-background-clip: padding;
     border-radius: 0;
     background-clip: padding-box;
-    width: 100em;
+    width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
   }
@@ -111,7 +117,7 @@ html {
 
 
   .img-circle{
-    border-radius: 50%;
+    object-fit: contain;
   }
   
   /*********************************************************************
@@ -123,7 +129,7 @@ html {
   **********************************************************************/
   p {
     line-height: 1.6em;
-    margin: 0 0 30px 0;
+    margin: auto;
   }
   
   
@@ -134,6 +140,8 @@ html {
     font-weight: 400;
     color: #ff0ada;
     font-size: 5em;
+    font-size: 3em;
+    font-size: 3rem;
   }
   h1,
   .h1{
@@ -145,10 +153,7 @@ html {
     font-size: 40px;
     font-size: 2.5rem;
   }
-  h2 {
-    font-size: 3em;
-    font-size: 3rem;
-  }
+
   
   a {
     color: #bd1550;
@@ -163,12 +168,12 @@ html {
     margin: 0;
     padding: 0;
     background-color: cornsilk;
-    width: 100em;
+    width: 100%;
     padding-bottom: 5%;
+    text-align: center;
 }
 .projects h1{
     color: #ff00d9;
-    text-align: center;
     font-size:3em;
     padding: 100px 0 0 0;
 }
@@ -190,21 +195,25 @@ html {
     font-size: 2em;
 }
 .container .col-md-12{
-    width: 80%;
+    width: 100%;
     font-size: 2em;
 }
 .container .col-sm-6{
-    width: 80%;
+    width: 100%;
     font-size: 2em;
 }
 .row{
-    margin: 0;
+    margin: auto;
     padding: 0;
-    width:100em;
+    width:100%;
+    text-align: center;
 }
 .row .section-title{
 
     text-align: center;
+}
+.lead text-center text-muted{
+    width: 100%;
 }
   /*********************************************************************
   
@@ -219,6 +228,7 @@ html {
     color: rgb(231, 252, 1);
     padding: 30px 0 35px 0;
     width: 100%;
+    
   }
   #head img.img-circle {
     display: block;
@@ -233,9 +243,8 @@ html {
     font-size: 49px;
     overflow: hidden;
     font-size: 3.0625rem;
-    position:relative;
-    left: 40%;
-    right: 40%
+    text-align: center;
+    margin: auto;
   }
   #head #logo{
     justify-content: center;
@@ -274,6 +283,12 @@ html {
     font-size: 1rem;
     margin: 15px 0 0;
   }
+  .title{
+    text-align: center;
+  }
+  #logo.text-center{
+    text-align: center;
+  }
   /*********************************************************************
   
   
@@ -281,18 +296,16 @@ html {
   
   
   **********************************************************************/
-  img {
-    max-width: 60%;
+  
+  .pictures{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .pictures img {
     width: 100px;
     height: 100px;
-    overflow: hidden;
-    margin: 0 0 20px;
-    position:sticky;
-  }
-  
-  .pictures {
-    display: flex;
-    justify-content: space-evenly;
   }
   
   @media (min-width: 1000px) {
