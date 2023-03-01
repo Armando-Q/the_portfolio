@@ -21,104 +21,120 @@ html {
     display:flex;
     justify-content: center;
   }
-  /*********************************************************************
+ /*********************************************************************
   
   
                               Navigation in header
   
   
   **********************************************************************/
-  .navbar {
-    border-width: 1px 0;
-    -webkit-border-radius: 0;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 0;
-    -moz-background-clip: padding;
-    border-radius: 0;
-    background-clip: padding-box;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-  .navbar.stick {
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: .85;
-  }
-  .navbar-collapse {
-    -webkit-border-radius: 0;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 0;
-    -moz-background-clip: padding;
-    border-radius: 0;
-    background-clip: padding-box;
-    font-family: "Open sans", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  .navbar-collapse .navbar-nav {
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .navbar-collapse .navbar-nav > li {
-    float: none;
-    display: inline-block;
-  }
-  .navbar-collapse .navbar-nav > li > a {
-    padding: 20px 30px;
+/*table of languages*/
+
+
+
+
+
+.navbar,
+.navbar-default {
+  border-width: 1px 0;
+  border-radius: 0;
+  background-clip: padding-box;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.navbar-default {
+  background-color: cornsilk;
+  border-color: #ece7e7;
+}
+
+.navbar.stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.85;
+}
+
+.navbar-collapse,
+.navbar-default .navbar-nav > li > a {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+
+.navbar-collapse {
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: x-large;
+}
+
+.navbar-default .navbar-nav > li > a {
+  display: block;
+  padding: 10px 20px;
+  color: #474444;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #0b0b0b;
+  background-color: #2cf10a;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #101010;
+  background-color: #fd0909;
+}
+
+.navbar-default .dropdown ul.dropdown-menu > li > a {
+  color: #0c0c0c;
+}
+
+.navbar-default .dropdown ul.dropdown-menu > li > a:hover {
+  background-color: #f30c0c;
+  color: #e1e2e1;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #a95353;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #e70909;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f90c0c;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f52727;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #b51111;
+  color: #101010;
+}
+
+
+.img-circle{
+    object-fit:contain;
+    height: 8em;
+    width: auto;
+    margin: 0;
   }
   
-  .navbar-default {
-    background-color:cornsilk;
-    border-color: #ece7e7;
-  }
-  .navbar-default .navbar-nav > li > a {
-    color: #474444;
-  }
-  .navbar-default .navbar-nav > li > a:hover{
-    color: #0b0b0b;
-    background-color: #2cf10a;
-  }
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover,
-  .navbar-default .navbar-nav > .active > a:focus {
-    color: #101010;
-    background-color: #fd0909;
-  }
-  .navbar-default .dropdown ul.dropdown-menu > li > a {
-    color: #0c0c0c;
-  }
-  .navbar-default .dropdown ul.dropdown-menu > li > a:hover {
-    background-color: #f30c0c;
-    color: #e1e2e1;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: #a95353;
-  }
-  .navbar-default .navbar-toggle:hover,
-  .navbar-default .navbar-toggle:focus {
-    background-color: #e70909;
-  }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #f90c0c;
-  }
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    border-color: #f52727;
-  }
-  .navbar-default .navbar-nav > .open > a,
-  .navbar-default .navbar-nav > .open > a:hover,
-  .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #b51111;
-    color:rgb(16, 16, 16);
-  }
-
-
-  .img-circle{
-    object-fit: contain;
-  }
   
   /*********************************************************************
   
@@ -127,7 +143,7 @@ html {
   
   
   **********************************************************************/
-  p {
+p {
     line-height: 1.6em;
     margin: auto;
   }
@@ -164,7 +180,7 @@ html {
   
 
 
-  .projects {
+.projects {
     margin: 0;
     padding: 0;
     background-color: cornsilk;
@@ -289,6 +305,28 @@ html {
   #logo.text-center{
     text-align: center;
   }
+  /*//////////////////////////////////////////////////////////////
+///*/
+
+
+
+.recentworks{
+  text-align: center;
+}
+.slang {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.slang > div {
+  text-align: center;
+}
+
+.slang > div > img {
+  max-width: 100%;
+  height: auto;
+}
   /*********************************************************************
   
   
@@ -314,8 +352,48 @@ html {
     }
     #head .title{
         max-width: 1100px;;
-
     }
-
+    .col-lg-4{
+      width: 33.333%;
+      float: left;
+    }
   }
+  /* For screens smaller than 768px (e.g. mobile devices) */
+@media (max-width: 767px) {
+  .slang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -5px;
+  }
+  .col-xs-12 {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+/* For screens between 768px and 992px (e.g. tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .slang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+    padding: 0 10px;
+  }
+}
+
+/* For screens larger than 992px (e.g. desktops) */
+@media (min-width: 992px) {
+  .slang {
+    display: flex;
+    justify-content: space-between;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+}
   
